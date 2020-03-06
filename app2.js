@@ -100,6 +100,5 @@ fs.readdir('ex',(err,files)=>{
             })
         }
     }
-
 });
 
