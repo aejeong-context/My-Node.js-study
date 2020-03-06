@@ -27,6 +27,8 @@ const fs = require('fs');
 //         console.log('successfully renamed the file'); 
 // });
 
+//파일 내용 추가하기
+
 // fs.appendFile('example2.text','Some data being appended!',(err)=>{
 //     if(err)
 //         console.log(err);
@@ -44,5 +46,60 @@ const fs = require('fs');
 // });
 
 
+// 폴더 만들기
 
+// fs.mkdir('tutorial',(err)=>{
+//     if(err)
+//         console.log(err);
+//     else{
+        //console.log('folder successfully created');
+       
+        // 폴더 삭제
+        // fs.rmdir('tutorial',(err)=>{
+        //     if(err)
+        //         console.log(err);
+        //     else(err)
+        //         console.log('Scuccessfully deleted the folder');
+        // });
+        
+        //else에 파일도 같이 만들어 줌
+//         fs.writeFile('./tutorial/example.text','123',(err)=>{
+//             if(err)
+//                 console.log(err);
+//             else{
+//                 console.log('successfully created file');
+//             }
+//         });
+//     }
+// });
+
+//파일삭제
+
+// fs.unlink('./tutorial/example.text',(err)=>{
+//     if(err)
+//         console.log(err);
+//     else
+//         console.log('deleted folder');
+// });
+
+//폴더 안에 파일이름 배열 형태로 출력
+
+fs.readdir('ex',(err,files)=>{
+    if(err)
+        console.log(err);
+    else{
+        //console.log(files);
+        //반복문으로 파일들 전부 삭제함.
+        for(let file of files){
+            fs.unlink('./ex/'+file,(err)=>{
+                if(err)
+                    console.log(err);
+                else{
+                    console.log('successfully delete file');
+                }
+            })
+        }
+    }
+
+});
 
