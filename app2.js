@@ -91,7 +91,9 @@ fs.readdir('ex',(err,files)=>{
         //console.log(files);
         //반복문으로 파일들 전부 삭제함.
         for(let file of files){
+            //unlink 비동기식 파일삭제 
             fs.unlink('./ex/'+file,(err)=>{
+                //넘어온 data를 다루는 콜백함수 호출하여 수행    
                 if(err)
                     console.log(err);
                 else{
