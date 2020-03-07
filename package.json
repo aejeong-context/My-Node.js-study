@@ -1,0 +1,20 @@
+{
+  "name": "nodejsstudy",
+  "version": "1.0.0",
+  "description": "tutorial",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aejeong-context/My-Node.js-study.git"
+  },
+  "author": "aejeong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aejeong-context/My-Node.js-study/issues"
+  },
+  "homepage": "https://github.com/aejeong-context/My-Node.js-study#readme",
+  "dependencies": {}
+}
