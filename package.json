@@ -16,5 +16,8 @@
     "url": "https://github.com/aejeong-context/My-Node.js-study/issues"
   },
   "homepage": "https://github.com/aejeong-context/My-Node.js-study#readme",
-  "dependencies": {}
+  "dependencies": {
+    "express": "4.17.1"
+  },
+  "keywords": []
 }
