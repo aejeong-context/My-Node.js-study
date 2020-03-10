@@ -1,1 +1,42 @@
-som html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/" method="POST" id="form">
+        <label for="email">Email address : </label>
+        <input type="email" name="email">
+        <label for="pw">Password : </label>
+        <input type="password" name="pw">
+        <button type="submit">submit</button>
+
+
+    </form>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <script>
+      $(document).ready(()=>{
+          $('#form').submit((e)=>{
+              e.preventDefault();
+              $.ajax({
+                  url:'/',
+                  type:'post',
+                  contentType:'application/json',
+                  data:JSON.stringify($('#form').serializeArray()),
+                  success:(Response)=>{
+                      console.log('successfully got response');
+                      console.log(Response);
+                  }
+              })
+          })
+      })
+
+  </script>
+    
+</body>
+</html>
